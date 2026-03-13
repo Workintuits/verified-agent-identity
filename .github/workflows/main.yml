@@ -26,7 +26,7 @@ jobs:
           node-version: '20'
 
       - name: Bước 1 - Cài đặt ClawHub
-        run: npx clawhub@latest install verified-agent-identity
+        run: npx clawhub@latest install verified-agent-identity --force
 
       - name: Cài đặt các thư viện cần thiết
         run: |
@@ -39,4 +39,3 @@ jobs:
       - name: Bước 3 - Xem link xác minh Agent
         run: |
           node scripts/manualLinkHumanToAgent.js --challenge '{"name": "talama", "description": "talama AI Agent"}'
-
